@@ -39,6 +39,8 @@ gem 'jquery-ui-rails'
 gem "font-awesome-rails"
 gem 'ionicons-rails'
 gem 'haml' 
+gem 'bootstrap', '~> 4.0.0.beta'
+
 #gem 'simple_form'
 
 
