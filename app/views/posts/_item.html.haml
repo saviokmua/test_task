@@ -1,0 +1,8 @@
+.blog-post
+  %h2.blog-post-title 
+    = post.name
+  %p.blog-post-meta
+    = post.createt_at
+    = link_to '#'#, post.author
+  = post.content
+/ /.blog-post

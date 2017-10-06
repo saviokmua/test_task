@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title TestTask
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render "shared/header"
+    .container
+      .row
+        .col-sm-8.blog-main
+          = yield
+        / /.blog-main
+        .col-sm-3.offset-sm-1.blog-sidebar
+          = render "shared/sidebar"
+        / /.blog-sidebar
+      / /.row
+    / /.container
+    = render "shared/footer"
+    
