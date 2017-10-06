@@ -35,13 +35,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'devise'
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 5.0'
 gem "font-awesome-rails"
 gem 'ionicons-rails'
 gem 'haml' 
 gem 'bootstrap', '~> 4.0.0.beta'
+gem 'rails_admin', '~> 1.2'
+gem 'rails_admin_material'
 
-#gem 'simple_form'
 
 
 group :development, :test do
