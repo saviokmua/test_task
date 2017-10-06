@@ -1,8 +1,10 @@
 .blog-post
   %h2.blog-post-title 
-    = post.name
+    = link_to post.name, post
   %p.blog-post-meta
-    = post.createt_at
+    = post.created_at
     = link_to '#'#, post.author
+  %p
+    = image_tag post.file.url(:medium) if post.file.present?
   = post.content
 / /.blog-post
