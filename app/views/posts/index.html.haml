@@ -1,3 +1,4 @@
 .posts-list
   - @posts.each do |post|
     = render partial: "item", locals: {post: post}
+  = paginate @posts, theme: 'twitter-bootstrap-4'

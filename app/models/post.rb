@@ -10,7 +10,7 @@ class Post < ApplicationRecord
 
   validates_attachment_size :file, :in => 0.megabytes..2.megabytes
   validates :name, :content, presence: true
-
+  paginates_per 25
 
 
 end

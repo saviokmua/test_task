@@ -1,3 +1,4 @@
 .categories-list
   - @categories.each do |category|
     = render partial: "item", locals: {category: category}
+  = paginate @categories, theme: 'twitter-bootstrap-4'    
