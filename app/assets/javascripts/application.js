@@ -44,7 +44,7 @@ $(document).on("turbolinks:load", function(){
   after   : null,
   watch   : true,
   /*  Optionally set a max-height, can be a number or function.*/
-  height    : 220,
+  height    : 120,
   tolerance : 0,
   callback  : function( isTruncated, orgContent ) {},
   lastCharacter : {
