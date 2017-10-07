@@ -5,9 +5,8 @@
     = post.date
   %p.blog-post-meta
     = post_categories(post)
-
   %p
     = image_tag post.file.url(:medium) if post.file.present?
   .post-content
     = post.content
-
+  = link_to "Comments(#{post.comments_count})", post_path(post,anchor: "comments") if action_name == 'index'
