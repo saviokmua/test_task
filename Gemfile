@@ -45,6 +45,7 @@ gem 'rails_admin_material'
 gem "paperclip", "~> 5.0.0"
 gem 'simple_form'
 gem 'ckeditor'
+gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

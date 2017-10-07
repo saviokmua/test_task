@@ -15,4 +15,8 @@ module ApplicationHelper
       link_to "Sign In", new_user_session_path, class: "nav-link"
     end
   end
+
+  def post_categories post
+    "Categories: #{post.categories.map{|category| link_to category.name, category}.join(',')}".html_safe if post.categories.any?
+  end
 end

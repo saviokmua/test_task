@@ -3,6 +3,9 @@
     = link_to post.name, post
   %p.blog-post-meta
     = post.date
+  %p.blog-post-meta
+    = post_categories(post)
+
   %p
     = image_tag post.file.url(:medium) if post.file.present?
   .post-content
