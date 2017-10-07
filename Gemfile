@@ -43,6 +43,7 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'rails_admin', '~> 1.2'
 gem 'rails_admin_material'
 gem "paperclip", "~> 5.0.0"
+gem 'simple_form'
 
 
 group :development, :test do

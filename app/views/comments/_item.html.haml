@@ -1,0 +1,8 @@
+%li.media
+  = image_tag "defaultuser.png", class: "d-flex mr-3"
+  .media-body
+    %h5.mt-0.mb-1 
+      = "#{comment.author} (#{comment.date})"
+    = comment.content
+
+

@@ -1,0 +1,4 @@
+%ul.list-unstyled#comments-list
+  - object.comments.each do |comment|
+    = render partial: "comments/item", locals: {comment: comment}
+= render partial: "comments/form", locals: {object: object}
