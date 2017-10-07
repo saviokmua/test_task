@@ -1,0 +1,6 @@
+- if object.errors.any?
+  .alert.alert-danger
+    This form has #{pluralize(object.errors.count, 'problem')}
+  %ul
+    - object.errors.full_messages.each do |msg|
+      %li.alert.alert-danger= msg
