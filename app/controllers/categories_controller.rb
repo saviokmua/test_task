@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
   private
 
   def set_category
-    @category = Category.find(params[:id])
+    @category = Category.find(params[:id]) or redirect_to error404_path
   end
 
 end
