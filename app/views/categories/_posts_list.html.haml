@@ -1,0 +1,5 @@
+%h2 Posts of Category
+%ul
+  - category.posts.each do |post|
+    %li
+      = link_to post.name, post_path(post)
