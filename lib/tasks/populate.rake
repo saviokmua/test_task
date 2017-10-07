@@ -20,7 +20,9 @@ namespace :db do
           Post.create do |post|
             post.name = Faker::Lorem.word
             post.content = Faker::Lorem.paragraph
-            post.file = URI.parse("http://lorempixel.com/500/500/")
+            file = URI.parse("http://lorempixel.com/500/500/")
+            post.file = file
+            post.file_file_name = "post_#{post.id}.png"
             post.categories << category
             15.times do
               Comment.create do |comment|
