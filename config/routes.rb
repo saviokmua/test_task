@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :categories
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  resources :categories
+  resources :comments
   resources :posts
   root "posts#index"
 end

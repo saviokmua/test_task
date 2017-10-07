@@ -36,4 +36,24 @@ $(document).on("turbolinks:load", function(){
       noEllipsis  : []
     }
   });
+
+ $(".categories-list .category-description").dotdotdot({
+  ellipsis  : '...',
+  wrap    : 'word',
+  fallbackToLetter: true,
+  after   : null,
+  watch   : true,
+  /*  Optionally set a max-height, can be a number or function.*/
+  height    : 220,
+  tolerance : 0,
+  callback  : function( isTruncated, orgContent ) {},
+  lastCharacter : {
+    remove    : [ ' ', ',', ';', '.', '!', '?' ],
+
+      /*  Don't add an ellipsis if this array contains
+      the last character of the truncated text. */
+      noEllipsis  : []
+    }
+  });
+
 });

@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  default_scope {order(created_at: :desc)}
   has_and_belongs_to_many :categories
   has_many :comments, as: :commentable
   has_attached_file :file,    styles: { medium: "500x500>", thumb: "250x250>" }

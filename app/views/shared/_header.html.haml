@@ -1,9 +1,9 @@
 .blog-masthead
   .container
     %nav.nav
-      %a.nav-link.active{:href => "#"} Home
-      %a.nav-link{:href => "#"} Categories
-      %a.nav-link{:href => "#"} Posts
+      = link_to "Home",root_path, class: "nav-link active"
+      = link_to "Categories", categories_path, class: "nav-link"
+      = link_to "Posts", posts_path, class: "nav-link"
 .blog-header
   .container
     %h1.blog-title The Bootstrap Blog
