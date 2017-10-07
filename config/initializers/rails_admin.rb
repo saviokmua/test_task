@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
   config.main_app_name = ["Blog"]
+  config.included_models = ['Category','Comment','Post']
   ### Popular gems integration
 
   ## == Devise ==
@@ -32,7 +33,7 @@ RailsAdmin.config do |config|
     show
     edit
     delete
-    show_in_app
+    #show_in_app
 
     ## With an audit adapter, you can add:
     # history_index
@@ -44,6 +45,57 @@ RailsAdmin.config do |config|
       field :name
       field :content, :ck_editor
       field :file
+      field :categories
+    end
+    list do
+      field :name
+      field :content
+      field :file
+      field :comments_count
+    end
+    show do
+      field :name
+      field :content
+      field :comments_count
+    end
+
+  end
+
+  config.model Category do
+    edit do
+      field :name
+      field :description
+    end
+    list do
+      field :name
+      field :description
+      field :comments_count
+      field :created_at
+    end
+    show do
+      field :name
+      field :description
+      field :comments_count
+      field :created_at
+    end
+  end
+
+  config.model Comment do
+    edit do
+      field :author
+      field :content
+    end
+    list do
+      field :author
+      field :content
+      field :created_at
+      field :commentable
+    end
+    show do
+      field :author
+      field :content
+      field :created_at
+      field :commentable
     end
   end
 

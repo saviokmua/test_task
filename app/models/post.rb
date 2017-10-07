@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   include Base
+  include CommentConcern
   default_scope {order(created_at: :desc)}
   has_and_belongs_to_many :categories
   has_many :comments, as: :commentable
@@ -9,5 +10,7 @@ class Post < ApplicationRecord
 
   validates_attachment_size :file, :in => 0.megabytes..2.megabytes
   validates :name, :content, presence: true
+
+
 
 end
