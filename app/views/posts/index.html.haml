@@ -1,3 +1,4 @@
+- content_for :title, "Posts"
 .posts-list
   - @posts.each do |post|
     = render partial: "item", locals: {post: post}

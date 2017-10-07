@@ -1,3 +1,4 @@
+- content_for :title, @category.name
 = render partial: "item", locals: {category: @category}
 = render partial: "posts_list", locals: {category: @category} if @category.comments.any?
 = render partial: "comments/list", locals: {object: @category}

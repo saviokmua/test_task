@@ -4,6 +4,15 @@ module ApplicationHelper
     "active" if current_page?(root_path)
   end
 
+  def full_title(page_title)
+    base_title = "The Bootstrap Blog"
+    if page_title.empty?
+      base_title
+    else
+      "#{page_title} | #{base_title}"
+    end
+  end
+
   def page_active(name)
     "active" if controller_name == name and !current_page?(root_path)
   end
