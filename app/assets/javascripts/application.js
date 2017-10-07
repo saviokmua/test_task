@@ -13,5 +13,27 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
+//= require jquery.dotdotdot.min
 //= require turbolinks
 //= require_tree .
+
+$(document).on("turbolinks:load", function(){
+ $(".posts-list .post-content").dotdotdot({
+  ellipsis  : '...',
+  wrap    : 'word',
+  fallbackToLetter: true,
+  after   : null,
+  watch   : true,
+  /*  Optionally set a max-height, can be a number or function.*/
+  height    : 220,
+  tolerance : 0,
+  callback  : function( isTruncated, orgContent ) {},
+  lastCharacter : {
+    remove    : [ ' ', ',', ';', '.', '!', '?' ],
+
+      /*  Don't add an ellipsis if this array contains
+      the last character of the truncated text. */
+      noEllipsis  : []
+    }
+  });
+});
